@@ -18,12 +18,12 @@
             <tbody>
                 {% for article in articles %}
                     <tr>
-                        <th scope="row">{{ article }}</th>
-                        <td>{{ article }}</td>
+                        <th scope="row">{{ article.id }}</th>
+                        <td>{{ article.title }}</td>
                         <td>
-                            <a href="" class="btn btn-success">Просмотреть</a>
-                            <a href="" class="btn btn-info">Редактировать</a>
-                            <a href="" class="btn btn-danger">Удалить</a>
+                            <a href="/article/{{ article.id }}/show" class="btn btn-success">Просмотреть</a>
+                            <a href="/article/{{ article.id }}/update" class="btn btn-info">Редактировать</a>
+                            <a href="/article/{{ article.id }}/delete" class="btn btn-danger">Удалить</a>
                         </td>
                     </tr>
                 {% endfor %}

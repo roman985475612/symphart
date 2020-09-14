@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Список статей | SymphArt{% endblock %}
+
+{% block body %}
+    <a href="/" class="btn btn-outline-secondary">Назад</a>
+    <h1>{{ article.title }}</h1>
+    <hr>
+    <p>{{ article.body }}</p>
+{% endblock %}
